@@ -1,6 +1,4 @@
 ---
-- debug:
-    msg: "{{ mountpoint }}"
 
 - name: Make mountpoint
   ansible.builtin.file:
@@ -10,4 +8,11 @@
     owner: "{{ ansible_env.USER }}"
     group: "{{ ansible_env.USER }}"
   become: true
-  when: false
+
+- name: Mount volume from UUID
+  ansible.posix.mount:
+    path: "{{ mountpoint }}"
+    src: "UUID={{ uuid }}"
+    state: mounted
+    fstype: "{{ fstype }}"
+  become: true

@@ -1,4 +1,5 @@
-uuid: todo
+uuid: 18ddad69-25f2-4014-bbcc-36cc4fb3d876
 tmp_dev: sdb1
-name: stor0
-mountpoint: "/media/{{ ansible_env.USER }}/{{ name }}"
+volume_name: stor0
+mountpoint: "/media/{{ ansible_env.USER }}/{{ volume_name }}"
+fstype: btrfs
