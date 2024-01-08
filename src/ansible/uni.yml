@@ -1,0 +1,7 @@
+- hosts: stor # localhost
+  vars:
+    foo: "bar"
+  vars_files:
+    - vars/Disk.yml
+  roles:
+  - FStab/mount

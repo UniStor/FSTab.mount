@@ -1,0 +1,4 @@
+uuid: todo
+tmp_dev: sdb1
+name: stor0
+mountpoint: "/media/{{ ansible_env.USER }}/{{ name }}"
